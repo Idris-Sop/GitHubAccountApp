@@ -1,6 +1,7 @@
 // data/models/github_repository.dart
 import 'package:json_annotation/json_annotation.dart';
 import 'package:equatable/equatable.dart';
+import 'github_repository_license.dart';
 import 'github_repository_owner.dart';
 
 part 'github_repository.extension.dart';
@@ -76,7 +77,7 @@ class GitHubRepository extends Equatable {
   final bool? archived;
   final bool? disabled;
   final int? openIssuesCount;
-  final String? license;
+  final License? license;
   final bool? allowForking;
   final bool? isTemplate;
   final bool? webCommitSignoffRequired;
@@ -325,7 +326,7 @@ class GitHubRepository extends Equatable {
     bool? archived,
     bool? disabled,
     int? openIssuesCount,
-    String? license,
+    License? license,
     bool? allowForking,
     bool? isTemplate,
     bool? webCommitSignoffRequired,
